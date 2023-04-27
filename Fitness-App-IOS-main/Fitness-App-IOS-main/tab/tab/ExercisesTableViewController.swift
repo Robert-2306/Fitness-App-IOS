@@ -30,18 +30,27 @@ class ExercisesTableViewController: UIViewController {
 extension ExercisesTableViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let record_vc = storyboard?.instantiateViewController(withIdentifier: "recordViewController") as! RecordViewController
+        
         switch id{
         case "Cardio":
             print(cardio[indexPath.row])
+            record_vc.id = cardio[indexPath.row]
         case "Chest":
             print(chest[indexPath.row])
+            record_vc.id = chest[indexPath.row]
         case "Back":
             print(back[indexPath.row])
+            record_vc.id = back[indexPath.row]
         case "Legs":
             print(legs[indexPath.row])
+            record_vc.id = legs[indexPath.row]
         default:
             print(legs[indexPath.row])
+            record_vc.id = legs[indexPath.row]
         }
+        
+        present(record_vc, animated: true)
 
     }
 
