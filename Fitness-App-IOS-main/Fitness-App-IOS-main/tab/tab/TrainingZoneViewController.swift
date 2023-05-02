@@ -11,7 +11,7 @@ class TrainingZoneViewController: UIViewController {
 
     @IBOutlet weak var trainingZoneTableView: UITableView!
     
-    var trainingZone = ["Cardio", "Chest", "Back", "Legs"]
+    var trainingZone = ["Cardio", "Chest", "Back", "Legs", "Shoulders", "Triceps", "Biceps", "Abs"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

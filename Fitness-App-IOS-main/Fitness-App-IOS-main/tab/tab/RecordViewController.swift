@@ -9,26 +9,33 @@ import UIKit
 
 class RecordViewController: UIViewController, UITextFieldDelegate {
     
+    
     @IBOutlet var field: UITextField!
     
     var id: String = "asd"
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         field.delegate = self
-
-        // Do any additional setup after loading the view.
+//        
+//        let textField = UITextField(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+//        view.addSubview(textField)
+//        textField.center = view.center
+//        textField.backgroundColor = .systemBlue
+        
+        //self.myTextField
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
-        saveTask()
-        
-        return true
-    }
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//
+//        saveTask()
+//
+//        return true
+//    }
     
-    @IBAction func saveTask(){
-        
-    }
+//    @IBAction func saveTask(){
+//
+//    }
     
 }

@@ -11,11 +11,16 @@ class ExercisesTableViewController: UIViewController {
 
     @IBOutlet weak var exercisesTableView: UITableView!
  
-//    var exercises = ["Cardio", "Chest", "Back", "Legs"]
-    var cardio = ["Run", "Swim", "Walk", "Hike"]
-    var chest = ["Push-Up", "Flat Bench Press"]
-    var back = ["Pull_Up", "Lat Pulldown"]
-    var legs = ["Squat", "Leg Press"]
+//    var exercises = ["Cardio", "Chest", "Back", "Legs", "Shoulders", "Triceps", "Biceps", "Abs"]
+    var cardio = ["Run", "Swim", "Walk", "Hike", "Cycling"]
+    var chest = ["Push-Up", "Flat Bench Press", "Cable Fly", "Chest Press"]
+    var back = ["Pull-Up", "Lat Pulldown", "Chin Up", "Low Row"]
+    var legs = ["Squat", "Leg Press", "Leg Extension Machine", "RDL", "Hamstrings Machine", "Calf Raises"]
+    var shoulders = ["Military Press", "Lateral Dumbbell Raises", "Front Dumbbell Raises", "Cable Face Pull"]
+    var triceps = ["Bar Push Down", "Dips", "Rope Push Down", "Dumbell Overhead Extension"]
+    var biceps = ["Dumbell Curl", "Barbell Curl", "Hammer Curl", "Preacher Curls"]
+    var abs = ["Crunch", "Plank", "Cable Crunch"]
+    
     var id: String = "asd"
     
     override func viewDidLoad() {
@@ -24,7 +29,6 @@ class ExercisesTableViewController: UIViewController {
         exercisesTableView.delegate = self
         exercisesTableView.dataSource = self
     }
-
 }
 
 extension ExercisesTableViewController: UITableViewDelegate, UITableViewDataSource {
@@ -45,6 +49,18 @@ extension ExercisesTableViewController: UITableViewDelegate, UITableViewDataSour
         case "Legs":
             print(legs[indexPath.row])
             record_vc.id = legs[indexPath.row]
+        case "Shoulders":
+            print(shoulders[indexPath.row])
+            record_vc.id = shoulders[indexPath.row]
+        case "Triceps":
+            print(triceps[indexPath.row])
+            record_vc.id = triceps[indexPath.row]
+        case "Biceps":
+            print(biceps[indexPath.row])
+            record_vc.id = biceps[indexPath.row]
+        case "Abs":
+            print(abs[indexPath.row])
+            record_vc.id = abs[indexPath.row]
         default:
             print(legs[indexPath.row])
             record_vc.id = legs[indexPath.row]
@@ -64,6 +80,14 @@ extension ExercisesTableViewController: UITableViewDelegate, UITableViewDataSour
             return back.count
         case "Legs":
             return legs.count
+        case "Shoulders":
+            return shoulders.count
+        case "Triceps":
+            return triceps.count
+        case "Biceps":
+            return biceps.count
+        case "Abs":
+            return abs.count
         default:
             return legs.count
         }
@@ -90,6 +114,22 @@ extension ExercisesTableViewController: UITableViewDelegate, UITableViewDataSour
         case "Legs":
             let cell = exercisesTableView.dequeueReusableCell(withIdentifier: "exercisesCell", for: indexPath)
             cell.textLabel?.text = legs[indexPath.row]
+            return cell
+        case "Shoulders":
+            let cell = exercisesTableView.dequeueReusableCell(withIdentifier: "exercisesCell", for: indexPath)
+            cell.textLabel?.text = shoulders[indexPath.row]
+            return cell
+        case "Triceps":
+            let cell = exercisesTableView.dequeueReusableCell(withIdentifier: "exercisesCell", for: indexPath)
+            cell.textLabel?.text = triceps[indexPath.row]
+            return cell
+        case "Biceps":
+            let cell = exercisesTableView.dequeueReusableCell(withIdentifier: "exercisesCell", for: indexPath)
+            cell.textLabel?.text = biceps[indexPath.row]
+            return cell
+        case "Abs":
+            let cell = exercisesTableView.dequeueReusableCell(withIdentifier: "exercisesCell", for: indexPath)
+            cell.textLabel?.text = abs[indexPath.row]
             return cell
         default:
             let cell = exercisesTableView.dequeueReusableCell(withIdentifier: "exercisesCell", for: indexPath)

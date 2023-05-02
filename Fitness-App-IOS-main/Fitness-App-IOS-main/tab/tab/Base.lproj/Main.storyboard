@@ -33,7 +33,7 @@
         <!--History-->
         <scene sceneID="2dZ-Cu-GFZ">
             <objects>
-                <viewController id="VBc-4e-1sI" sceneMemberID="viewController">
+                <viewController id="VBc-4e-1sI" customClass="HistoryViewController" customModule="tab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eSl-5Z-F9r">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -119,14 +119,13 @@
                             <constraint firstItem="Pz4-Us-DAA" firstAttribute="bottom" secondItem="WVI-fg-cUk" secondAttribute="bottom" id="oCz-kX-b9p"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Mv5-kK-Stb"/>
                     <connections>
                         <outlet property="exercisesTableView" destination="WVI-fg-cUk" id="hwS-qs-UXW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bEv-mH-chF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="320" y="2770"/>
+            <point key="canvasLocation" x="320" y="2777"/>
         </scene>
         <!--Record View Controller-->
         <scene sceneID="F9V-gq-Phv">
@@ -274,6 +273,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BaN-Je-UkB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="320" y="577"/>
+        </scene>
+        <!--Record View Controller-->
+        <scene sceneID="9JG-hy-AsJ">
+            <objects>
+                <viewController storyboardIdentifier="recordViewController_2" id="5eN-gs-Aro" customClass="RecordViewController" customModule="tab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yif-RT-MfZ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p1t-8d-XTV">
+                                <rect key="frame" x="80" y="179" width="233" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="mdt-O0-Ift"/>
+                                </constraints>
+                                <color key="textColor" systemColor="linkColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GGQ-Eb-4hS">
+                                <rect key="frame" x="319" y="119.66666666666697" width="45" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <imageReference key="image" image="plus.circle" catalog="system" symbolScale="large" renderingMode="template"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aub-Hq-gW4"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                        <constraints>
+                            <constraint firstItem="aub-Hq-gW4" firstAttribute="trailing" secondItem="p1t-8d-XTV" secondAttribute="trailing" constant="80" id="Ew5-3I-Op7"/>
+                            <constraint firstItem="p1t-8d-XTV" firstAttribute="top" secondItem="aub-Hq-gW4" secondAttribute="top" constant="120" id="XVH-K7-rMd"/>
+                            <constraint firstItem="p1t-8d-XTV" firstAttribute="leading" secondItem="aub-Hq-gW4" secondAttribute="leading" constant="80" id="hFF-ZT-fDd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="field" destination="p1t-8d-XTV" id="GAc-u3-gbs"/>
+                        <outlet property="myTextField" destination="p1t-8d-XTV" id="4Rp-AG-8WI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q9j-YY-g3x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-880" y="3405"/>
         </scene>
     </scenes>
     <resources>
